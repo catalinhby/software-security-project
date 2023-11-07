@@ -1,0 +1,12 @@
+Programul este Login si sign up in php.
+S-a folosit POST ca metoda de preluare a datelor pentru a nu fi afisat in cadrul URL datele introduse.
+S-a folosit metoda "mysqli_real_escape_string" pentru ca in momentul trimiterii datelor catre baza de date sa se renunte 
+la spatii sau semne de punctuatie introduse de la tastatura, acest lucru protejeaza baza de date impotriva sqlinjection.
+S-a foosit ca si algoritm de criptare SHA-512, in baza de date fiind introduse direct datele criptate, 
+care vor fi ulterior decriptate in momentul logarii.
+
+This programe is a Login and SignUp in PHP.
+In order to prevent showing your credentials in the URL POST method is used to take data from fields.
+"mysqli_real_escape_string" method is used in order to prevent sending blank spaces and punctuation characters to the database, in order to prevent hijacking the database trough sqlinjection.
+For encription I used SHA-512, only encrypted information is send trough the connection.
+When signing up the data is encrypted and compared with the stored information in the database.
